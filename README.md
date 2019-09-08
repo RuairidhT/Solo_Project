@@ -2,9 +2,9 @@
 ## BILLY NO WEIGHTS
 
 ### Index
-[Brief](#brief)
+* [Brief](#brief)
 
-[Front End Design](#FE)
+* [Front End Design](#FE)
 
 
 <a name="brief"></a>
