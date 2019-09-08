@@ -1,0 +1,8 @@
+CREATE TABLE Exercises ( 
+	ID int NOT NULL AUTO_INCREMENT,
+    Name varchar(30) NOT NULL,
+    MuscleGroup varchar(30),
+    Description varchar(255),
+	Tutorial varchar(100),
+    PRIMARY KEY (ID)
+);
