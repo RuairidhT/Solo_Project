@@ -15,7 +15,7 @@ To create an OOP-based application with utilisation of supporting tools, methodo
 ### Front End Design
 #### Wireframes
 Home Page
-![Home page Wireframe](/Documentation/Homepage.png
+![Home page Wireframe](/Documentation/Homepage.png)
 Exercises Page
 ![Exercises page Wireframe](/Documentation/ExercisesPage.png)
 Workouts Page
