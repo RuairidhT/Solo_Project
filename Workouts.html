@@ -13,19 +13,24 @@
 
 <body>
     <nav class="navbar navbar-light navbar-expand-md navbar-transparency">
-        <div class="container"><a class="navbar-brand" href="#">BILLY NO WEIGHTS</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse"
-                id="navcol-1">
+        <div class="container"><a class="navbar-brand" href="#">BILLY NO WEIGHTS</a><button class="navbar-toggler"
+                data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span
+                    class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-1">
                 <ul class="nav navbar-nav ml-auto">
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="Home.html">HOME</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="Exercises.html">EXERCISES</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="Index.html">HOME</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="Exercises.html">EXERCISES</a>
+                    </li>
                     <li class="nav-item" role="presentation"><a class="nav-link" href="Workouts.html">WORKOUTS</a></li>
                 </ul>
             </div>
         </div>
     </nav>
     <div style="padding-right:10px;padding-left:10px;">
-        <h6>Create new workout:</h6><input type="text" placeholder="Workout name"><button class="btn btn-primary" type="button">Add</button></div>
+        <h6>Create new workout:</h6>
+        <input type="text" placeholder="Workout name" id="Workout">
+        <button class="btn btn-primary" type="button" onclick="addWorkout()">Add</button>
+    </div>
     <div class="table-responsive" style="padding-top:30px;padding-left:10px;padding-right:10px;">
         <table class="table">
             <thead>
@@ -44,7 +49,11 @@
         </table>
     </div>
     <div style="padding-right:10px;padding-left:10px;">
-        <h6 style="padding-top:20px;">Add new exercise to workout:</h6><input type="text" placeholder="Exercise name"><button class="btn btn-primary" type="button">Add</button></div>
+        <h6 style="padding-top:20px;">Add new exercise to workout:</h6>
+        <input type="text" id="Name" placeholder="Exercise name">
+            <button class="btn btn-primary" type="button" onclick="addExercise()">Add</button>
+    </div>
+    <script src="assets/js/Workouts.js"></script>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/Fixed-navbar-starting-with-transparency.js"></script>
