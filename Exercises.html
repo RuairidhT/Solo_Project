@@ -38,6 +38,14 @@
                     <th>Tutorial</th>
                     <th>Modify</th>
                 </tr>
+                <tr>
+                    <td>Squat</td>
+                    <td>Legs</td>
+                    <td>A squat is a strength exercise in which the trainee lowers their hips from a standing position
+                        and then stands back up.</td>
+                    <td><a href="https://www.youtube.com/watch?v=aPYCiuiB4PA">Tutorial</a></td>
+                    <td><button class="btn btn-primary" onclick="openForm()">Modify</button></td>
+                </tr>
             </thead>
             <tbody>
                 <tr></tr>
@@ -45,6 +53,29 @@
             </tbody>
         </table>
     </div>
+
+    <div class="form-popup" id="myForm">
+        <form action="/action_page.php" class="form-container">
+            <h1>Modify</h1>
+
+            <label><b>Name</b></label>
+            <input type="text" placeholder="Name" required>
+
+            <label><b>Muscle Group</b></label>
+            <input type="text" placeholder="Muscle Group"  required>
+
+            <label><b>Description</b></label>
+            <input type="text" placeholder="Description"  required>
+
+            <label><b>Tutorial</b></label>
+            <input type="text" placeholder="Tutorial" required>
+
+            <button type="button" class="btn">Update</button>
+            <button type="button" class="btn cancel">Delete</button>
+            <button type="button" class="btn close" onclick="closeForm()">Close</button>
+        </form>
+    </div>
+
     <h6 style="padding-left:10px;padding-top:20px;">Add new exercise:</h6>
     <form style="padding-right:10px;padding-left:10px;" method="post" onsubmit="return eClicked(this)">
         <div>
@@ -58,7 +89,10 @@
 
     <div class="footer-basic" style="padding-bottom: 10px; padding-top: 200px">
         <footer>
-            <div class="social"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-facebook"></i></a></div>
+            <div class="social"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i
+                        class="icon ion-social-snapchat"></i></a><a href="#"><i
+                        class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-facebook"></i></a>
+            </div>
             <ul class="list-inline">
                 <li class="list-inline-item"><a href="#">Home</a></li>
                 <li class="list-inline-item"><a href="#">Services</a></li>
