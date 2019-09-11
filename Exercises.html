@@ -32,24 +32,16 @@
         <table class="table">
             <thead>
                 <tr>
+                    <th>ID</th>
                     <th>Name</th>
                     <th>Muscle Group</th>
                     <th>Description</th>
                     <th>Tutorial</th>
                     <th>Modify</th>
                 </tr>
-                <tr>
-                    <td>Squat</td>
-                    <td>Legs</td>
-                    <td>A squat is a strength exercise in which the trainee lowers their hips from a standing position
-                        and then stands back up.</td>
-                    <td><a href="https://www.youtube.com/watch?v=aPYCiuiB4PA">Tutorial</a></td>
-                    <td><button class="btn btn-primary" onclick="openForm()">Modify</button></td>
-                </tr>
             </thead>
-            <tbody>
-                <tr></tr>
-                <tr></tr>
+            <tbody id="tabBod">
+                
             </tbody>
         </table>
     </div>
@@ -62,10 +54,10 @@
             <input type="text" placeholder="Name" required>
 
             <label><b>Muscle Group</b></label>
-            <input type="text" placeholder="Muscle Group"  required>
+            <input type="text" placeholder="Muscle Group" required>
 
             <label><b>Description</b></label>
-            <input type="text" placeholder="Description"  required>
+            <input type="text" placeholder="Description" required>
 
             <label><b>Tutorial</b></label>
             <input type="text" placeholder="Tutorial" required>
