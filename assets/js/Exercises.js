@@ -18,7 +18,7 @@ function handleExercises(data) {
     let exerciseInfo = [];
     let exercisesInfo;
 
-    for (let ex of data) {// Each owner
+    for (let ex of data) { // Each owner
         exercisesInfo = [];
 
         exercisesInfo.push(ex.id);
@@ -38,19 +38,23 @@ function handleExercises(data) {
 }
 
 function buildTable(tableData) {
-    
+
     let tableBody = document.getElementById("tabBod");
-    let container;
     let contInner;
 
-    container = document.createElement("tr");
+    let container = document.createElement("tr");
     tableBody.appendChild(container);
 
     for (let data of tableData) {
         contInner = document.createElement("td");
-        if(data.toString().includes("https://")){
-            data = "<a href="+data+">Tutorial</a>";
-        }else{
+        if (data.toString().includes("https://")) {
+
+            var newString = data.replace("watch?v=", "embed/");
+            console.log(newString);
+            data = "<iframe width='220' height='145' src=" + newString + " allowfullscreen='allowfullscreen'></iframe>";
+
+            // data = "<a href=" + data + ">Tutorial</a>";
+        } else {
 
         }
         contInner.innerHTML = data;
@@ -58,8 +62,6 @@ function buildTable(tableData) {
     }
 
     contInner = document.createElement("td");
-
-    let link = "ViewPetsByOwner.html";
 
     let modifyBtn = "<button class='btn btn-primary' onclick='openForm()'>Modify</button>";
 
