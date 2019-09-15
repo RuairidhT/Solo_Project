@@ -78,13 +78,26 @@ function populateModal(id, name, mGroup, description, tutorial) {
 function updateExercise(form) {
 
     let formObject = {};
+    let id = 0;
     for (let element of form.elements) {
-        if (element.value) {
+        if (element.name === "id") {
+            id = element.value;
+        } else {
             formObject[element.name] = element.value;
         }
     };
 
-    console.log(formObject);
+    makeRequest("http://34.89.83.113:9000/exercises/" + id, formObject, "PUT")
+        .then((data) => {
+            console.log("it Worked!" + data);
+
+            $('#updateFunctionality').modal('hide');
+
+            window.location.href = window.location.href
+        })
+        .catch((data) => {
+            console.log("It failed!" + data);
+        });
 
 
     return false;
@@ -96,6 +109,45 @@ function deleteExercise() {
 
     var id = document.getElementById("inputID").value;
 
-    console.log(id + " deleted");
+    makeRequest("http://34.89.83.113:9000/exercises/", id, type = "DELETE")
+        .then((data) => {
+            console.log("Deleted" + data);
+            window.location.href = window.location.href
+        })
+        .catch((data) => {
+            console.log("It failed!" + data);
+        });
 
+}
+
+function addExercise(data) {
+
+    var formDataObj = {};
+
+    for (let element of data) {
+        if (element.name) {
+            formDataObj[element.name] = element.value;
+        }
+    }
+
+    makeRequest("http://34.89.83.113:9000/exercises/", formDataObj, type = "POST")
+        .then((data) => {
+            console.log("it Worked!" + data);
+
+            $('#exampleModalCenter').modal('hide');
+            $('.modal').on('hidden.bs.modal', function() {
+                $(this).find('form')[0].reset();
+            });
+
+            window.location.href = window.location.href;
+        })
+        .catch((data) => {
+            console.log("It failed!" + data);
+        })
+
+    console.log(formDataObj);
+
+
+
+    return false;
 }
