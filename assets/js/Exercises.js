@@ -20,12 +20,6 @@ function populateTable() {
             exerciseInfo.push(exercisesInfo);
         }
 
-        let tableBody = document.getElementById("tabBod");
-        let contInner;
-
-        let container = document.createElement("tr");
-        tableBody.appendChild(container);
-
         for (let exer of exerciseInfo) {
             let tableBody = document.getElementById("tabBod");
             let contInner;
@@ -38,7 +32,6 @@ function populateTable() {
                 if (data.toString().includes("https://")) {
 
                     var newString = data.replace("watch?v=", "embed/");
-                    console.log(newString);
                     data = "<iframe width='220' height='145' src=" + newString + " allowfullscreen='allowfullscreen'></iframe>";
 
                     // data = "<a href=" + data + ">Tutorial</a>";
@@ -51,7 +44,7 @@ function populateTable() {
 
             contInner = document.createElement("td");
 
-            let modifyBtn = "<button class='btn btn-primary' onclick='openForm()'>Modify</button>";
+            let modifyBtn = `<button type="button" class="btn btn-dark" data-toggle="modal" data-target="#exampleModalCenter" onclick='populateModal("${exer[0]}","${exer[1]}","${exer[2]}","${exer[3]}","${exer[4]}")'>Modify</button>`;
 
             contInner.innerHTML = modifyBtn;
 
@@ -60,42 +53,6 @@ function populateTable() {
 
     });
 }
-
-
-// function buildTable(tableData) {
-
-//     let tableBody = document.getElementById("tabBod");
-//     let contInner;
-
-//     let container = document.createElement("tr");
-//     tableBody.appendChild(container);
-
-//     for (let data of tableData) {
-//         contInner = document.createElement("td");
-//         if (data.toString().includes("https://")) {
-
-//             var newString = data.replace("watch?v=", "embed/");
-//             console.log(newString);
-//             data = "<iframe width='220' height='145' src=" + newString + " allowfullscreen='allowfullscreen'></iframe>";
-
-//             // data = "<a href=" + data + ">Tutorial</a>";
-//         } else {
-
-//         }
-//         contInner.innerHTML = data;
-//         container.appendChild(contInner);
-//     }
-
-//     contInner = document.createElement("td");
-
-//     let modifyBtn = "<button class='btn btn-primary' onclick='openForm()'>Modify</button>";
-
-//     contInner.innerHTML = modifyBtn;
-
-//     container.appendChild(contInner);
-
-// }
-
 
 function eClicked(form) {
 
@@ -106,15 +63,39 @@ function eClicked(form) {
         }
     };
 
-    console.log(formObject);
-
     return false;
 }
 
-function openForm() {
-    document.getElementById("myForm").style.display = "block";
+function populateModal(id, name, mGroup, description, tutorial) {
+
+    document.getElementById('inputID').value = id;
+    document.getElementById('inputName').value = name;
+    document.getElementById('inputGroup').value = mGroup;
+    document.getElementById('inputDesc').value = description;
+    document.getElementById('inputTutorial').value = tutorial;
 }
 
-function closeForm() {
-    document.getElementById("myForm").style.display = "none";
+function updateExercise(form) {
+
+    let formObject = {};
+    for (let element of form.elements) {
+        if (element.value) {
+            formObject[element.name] = element.value;
+        }
+    };
+
+    console.log(formObject);
+
+
+    return false;
+
+}
+
+
+function deleteExercise() {
+
+    var id = document.getElementById("inputID").value;
+
+    console.log(id + " deleted");
+
 }
