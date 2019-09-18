@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand|Poppins:700&display=swap');
+
 .form-popup {
     display: none;
     position: fixed;
@@ -81,4 +83,82 @@
     bottom: 23px;
     right: 28px;
     width: 280px;
+}
+
+/*Custom styles*/
+
+h1, h2, h3 {
+    color: #292F36;
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar {
+    background: #292F36;
+    min-height: 75px;
+    height: 75px;
+}
+
+
+/*Navbar Logo*/
+.navbar-light .navbar-brand {
+    font-family: 'Poppins', sans-serif;
+    color: #FF6B6B;
+}
+
+.navbar-light .navbar-brand:hover {
+    color: #E86262;
+}
+
+/*Navbar Links*/
+.navbar-light .navbar-nav .nav-link {
+    color: #FF6B6B;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #E86262;
+}
+
+/*Main row content*/
+.row {
+    padding: 25px;
+}
+
+.main-content {
+    padding-top: 5em;
+}
+
+p {
+    font-size: 1.2em;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.main-content .col-md-8 { position: relative; }
+
+.main-content .col-md-4 { position: relative; }
+
+.hero-title {
+    font-size: 3em;
+    text-transform: uppercase;
+    position: absolute;
+    top: 15%;
+}
+.hero-text { 
+    position: relative;
+    top: 50%;
+}
+
+.hero-img {
+    width: 700px;
+    height: 700px;
+    position: absolute;
+    left: 10%;
+}
+
+@media screen and (max-width: 799px) {
+    
+    .main-content .col-md-4 { height: 100%; }
+    
+    .hero-title { position: relative; }
+    
+    .hero-img { position: relative; left: 0; height: 80%; width: 100%; }
 }
