@@ -92,7 +92,6 @@ function updateExercise(form) {
             console.log("it Worked!" + data);
 
             $('#updateFunctionality').modal('hide');
-
             window.location.href = window.location.href
         })
         .catch((data) => {
