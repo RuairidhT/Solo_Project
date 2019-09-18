@@ -1,12 +1,30 @@
-CREATE TABLE Exercises ( 
-	ID int NOT NULL AUTO_INCREMENT,
-    Name varchar(30) NOT NULL UNIQUE,
-    MuscleGroup varchar(30),
-    Description varchar(255),
-	Tutorial varchar(100),
-    PRIMARY KEY (ID)
+CREATE TABLE exercises ( 
+	id INT NOT NULL AUTO_INCREMENT,
+    	name varchar(30) NOT NULL UNIQUE,
+	muscle_group VARCHAR(30),
+	description VARCHAR(1000),
+	tutorial VARCHAR(100),
+  	PRIMARY KEY (id)
+);
+
+CREATE TABLE machines (
+	id INT NOT NULL AUTO_INCREMENT,
+	name VARCHAR(50) NOT NULL UNIQUE,
+	description VARCHAR(1000),
+	PRIMARY KEY (id)
+);
+
+CREATE TABLE exercise_machine (
+	id INT NOT NULL AUTO_INCREMENT,
+	exercise_id INT NOT NULL,
+	machine_id INT NOT NULL,
+	PRIMARY KEY (id),
+	FOREIGN KEY (exercise_id) REFERENCES exercises(id),
+	FOREIGN KEY (machine_id) REFERENCES machines(id)
 );
 
 
-INSERT INTO Exercises (Name, MuscleGroup, Description, Tutorial)
+
+
+INSERT INTO exercises (name, muscle_group, description, tutorial)
 VALUES ("Crunch", "Abdominals", "big abs", "https://www.youtube.com/watch?v=Xyd_fa5zoEU");
