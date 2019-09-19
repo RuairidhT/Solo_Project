@@ -8,7 +8,7 @@ pipeline{
                 }
 		stage('---pushhtml---'){
                         steps{
-                                sh "sudo cp -r /var/lib/jenkins/workspace/solo_project /var/www/html"
+                                sh "sudo cp -r /var/lib/jenkins/workspace/solo-project /var/www/html"
                         }
                 }
 	}
