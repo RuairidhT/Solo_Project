@@ -8,7 +8,7 @@ function populateTable() {
         let exerciseInfo = [];
         let exercisesInfo;
 
-        for (let ex of exData) { // Each owner
+        for (let ex of exData) {
             exercisesInfo = [];
 
             exercisesInfo.push(ex.id);
