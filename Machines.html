@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
         crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
     <link rel="stylesheet" href="assets/css/Footer-Basic.css">
     <link rel="stylesheet" href="assets/css/styles.css">
@@ -30,7 +31,15 @@
                     </div>
                 </div>
             </nav>
-            <div class="table-responsive" style="padding-top:30px;padding-left:10px;padding-right:10px;">
+
+            <div class="input-group mb-3" style="padding-left:10px;padding-top:20px;padding-right:10px">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1"><i class="fa fa-search"></i></span>
+                </div>
+                <input type="text" class="form-control" id="myInput" onkeyup="searchFunction()" placeholder="Search by name" title="Type in a name">
+            </div>
+
+            <div class="table-responsive" style="padding-top:20px;padding-left:10px;padding-right:10px;">
                 <table class="table">
                     <thead>
                         <tr>
@@ -45,8 +54,8 @@
                 </table>
             </div>
 
-            <h6 style="padding-left:10px;padding-top:20px;">Add new machine:</h6>
-            <div>
+            <div style="padding-left:10px;padding-top:20px;">
+                <h6>Add new machine:</h6>
                 <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#addFunctionality">Add new machine</button>
             </div>
 
@@ -114,8 +123,6 @@
                     </div>
                 </div>
             </div>
-
-
         </div>
     </div>
 

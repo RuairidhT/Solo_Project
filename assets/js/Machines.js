@@ -79,7 +79,6 @@ function updateMachine(form) {
 
 }
 
-
 function deleteMachine() {
 
     var id = document.getElementById("inputID").value;
@@ -109,7 +108,7 @@ function addMachine(data) {
             console.log("it Worked!" + data);
 
             $('#exampleModalCenter').modal('hide');
-            $('.modal').on('hidden.bs.modal', function() {
+            $('.modal').on('hidden.bs.modal', function () {
                 $(this).find('form')[0].reset();
             });
 
@@ -122,4 +121,23 @@ function addMachine(data) {
     console.log(formDataObj);
 
     return false;
+}
+
+function searchFunction() {
+    var input, filter, table, tr, td, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("tableBod");
+    tr = table.getElementsByTagName("tr");
+    for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[1];
+        if (td) {
+            txtValue = td.textContent || td.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                tr[i].style.display = "";
+            } else {
+                tr[i].style.display = "none";
+            }
+        }
+    }
 }
