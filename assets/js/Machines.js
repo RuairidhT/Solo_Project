@@ -132,15 +132,19 @@ function searchFunction() {
     filter = input.value.toUpperCase();
     table = document.getElementById("tableBod");
     tr = table.getElementsByTagName("tr");
+
     for (i = 0; i < tr.length; i++) {
-        td = tr[i].getElementsByTagName("td")[1];
-        if (td) {
-            txtValue = td.textContent || td.innerText;
-            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+
+        td = tr[i].getElementsByTagName("td");
+
+        if (td.length > 0) { // to avoid th
+
+            if (td[0].innerHTML.toUpperCase().indexOf(filter) > -1 || td[1].innerHTML.toUpperCase().indexOf(filter) > -1) {
                 tr[i].style.display = "";
             } else {
                 tr[i].style.display = "none";
             }
+
         }
     }
 }
@@ -185,16 +189,45 @@ function getExercises(id, machineName) {
                         data = "<iframe width='220' height='145' src=" + newString + " allowfullscreen='allowfullscreen'></iframe>";
 
                         // data = "<a href=" + data + ">Tutorial</a>";
-                    } else {
-
                     }
                     contInner.innerHTML = data;
                     container.appendChild(contInner);
                 }
+                contInner = document.createElement("td");
+
+                let modifyBtn = `<button class="deleteButton" onclick='deleteExerMach("${exer[0]}")'>x</button>`;
+
+                contInner.innerHTML = modifyBtn;
+
+                container.appendChild(contInner);
             }
 
         })
         .catch((data) => {
             console.log("It failed!" + data);
         });
+}
+
+
+function deleteExerMach(id) {
+
+    makeRequest("http://34.89.83.113:9000/exerciseMachine/", id, type = "DELETE")
+        .then((data) => {
+            console.log("Deleted" + data);
+
+            $("a[data-target=#myExtraLargeModalLabel]").click(function(ev) {
+                ev.preventDefault();
+                var target = $(this).attr("href");
+
+                // load the url and show modal on success
+                $("#myExtraLargeModalLabel .modal-body").load(target, function() {
+                    $("#myExtraLargeModalLabel").modal("show");
+                });
+            });
+
+        })
+        .catch((data) => {
+            console.log("It failed!" + data);
+        });
+
 }
