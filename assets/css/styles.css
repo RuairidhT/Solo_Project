@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Quicksand|Poppins:700&display=swap');
-
 .open-button {
     background-color: #555;
     color: white;
@@ -13,9 +12,12 @@
     width: 280px;
 }
 
+
 /*Custom styles*/
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     color: #292F36;
     font-family: 'Poppins', sans-serif;
 }
@@ -28,6 +30,7 @@ h1, h2, h3 {
 
 
 /*Navbar Logo*/
+
 .navbar-light .navbar-brand {
     font-family: 'Poppins', sans-serif;
     color: #FF6B6B;
@@ -37,7 +40,9 @@ h1, h2, h3 {
     color: #E86262;
 }
 
+
 /*Navbar Links*/
+
 .navbar-light .navbar-nav .nav-link {
     color: #FF6B6B;
 }
@@ -46,7 +51,9 @@ h1, h2, h3 {
     color: #E86262;
 }
 
+
 /*Main row content*/
+
 .row {
     padding: 25px;
 }
@@ -60,9 +67,13 @@ p {
     font-family: 'Quicksand', sans-serif;
 }
 
-.main-content .col-md-8 { position: relative; }
+.main-content .col-md-8 {
+    position: relative;
+}
 
-.main-content .col-md-4 { position: relative; }
+.main-content .col-md-4 {
+    position: relative;
+}
 
 .hero-title {
     font-size: 3em;
@@ -70,7 +81,8 @@ p {
     position: absolute;
     top: 15%;
 }
-.hero-text { 
+
+.hero-text {
     position: relative;
     top: 50%;
 }
@@ -82,31 +94,41 @@ p {
     left: 10%;
 }
 
-
 @media screen and (max-width: 799px) {
-    
-    .main-content .col-md-4 { height: 100%; }
-    
-    .hero-title { position: relative; }
-    
-    .hero-img { position: relative; left: 0; height: 80%; width: 100%; }
+    .main-content .col-md-4 {
+        height: 100%;
+    }
+    .hero-title {
+        position: relative;
+    }
+    .hero-img {
+        position: relative;
+        left: 0;
+        height: 80%;
+        width: 100%;
+    }
 }
 
-
 #page-container {
-  position: relative;
-  min-height: 100vh;
+    position: relative;
+    min-height: 100vh;
 }
 
 #content-wrap {
-  padding-bottom: 2.5rem;  
+    padding-bottom: 2.5rem;
 }
 
 #footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 2.5rem;  
-  text-align: center;   
-  font-size:13px;       
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+    text-align: center;
+    font-size: 13px;
+}
+
+button.link {
+    background: none;
+    border: none;
+    text-align: left;
 }

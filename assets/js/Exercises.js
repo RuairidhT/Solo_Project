@@ -35,8 +35,9 @@ function populateTable() {
                     data = "<iframe width='220' height='145' src=" + newString + " allowfullscreen='allowfullscreen'></iframe>";
 
                     // data = "<a href=" + data + ">Tutorial</a>";
-                } else {
-
+                }
+                if (data == exer[1]) {
+                    data = `<button type="button" class="link" data-toggle="modal" data-target=".bd-example-modal-xl" onclick='getMachines("${exer[0]}","${exer[1]}")'>${exer[1]}</button>`;
                 }
                 contInner.innerHTML = data;
                 container.appendChild(contInner);
@@ -169,4 +170,48 @@ function searchFunction() {
             }
         }
     }
+}
+
+
+function getMachines(id, exerciseName) {
+    $("#tableBod").empty();
+    makeRequest("http://34.89.83.113:9000/exercise-machine/", id)
+        .then((data) => {
+            console.log("got it!" + data);
+
+            modalheader.innerText = exerciseName;
+
+            let machData = JSON.parse(data);
+
+            let machineInfo = [];
+            let machinesInfo;
+
+            for (let mach of machData) {
+                machinesInfo = [];
+
+                machinesInfo.push(mach.id);
+                machinesInfo.push(mach.name);
+                machinesInfo.push(mach.description);
+
+                machineInfo.push(machinesInfo);
+            }
+
+            for (let machine of machineInfo) {
+                let tableBody = document.getElementById("tableBod");
+                let contInner;
+
+                let container = document.createElement("tr");
+                tableBody.appendChild(container);
+
+                for (let data of machine) {
+                    contInner = document.createElement("td");
+                    contInner.innerHTML = data;
+                    container.appendChild(contInner);
+                }
+            }
+
+        })
+        .catch((data) => {
+            console.log("It failed!" + data);
+        });
 }

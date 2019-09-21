@@ -27,6 +27,9 @@ function populateTable() {
 
             for (let data of machine) {
                 contInner = document.createElement("td");
+                if (data == machine[1]) {
+                    data = `<button type="button" class="link" data-toggle="modal" data-target=".bd-example-modal-xl" onclick='getExercises("${machine[0]}","${machine[1]}")'>${machine[1]}</button>`;
+                }
                 contInner.innerHTML = data;
                 container.appendChild(contInner);
             }
@@ -108,7 +111,7 @@ function addMachine(data) {
             console.log("it Worked!" + data);
 
             $('#exampleModalCenter').modal('hide');
-            $('.modal').on('hidden.bs.modal', function () {
+            $('.modal').on('hidden.bs.modal', function() {
                 $(this).find('form')[0].reset();
             });
 
@@ -140,4 +143,66 @@ function searchFunction() {
             }
         }
     }
+}
+
+function getExercises(id, machineName) {
+    $("#tabBod").empty();
+    makeRequest("http://34.89.83.113:9000/machine-exercise/", id)
+        .then((data) => {
+            console.log("got it!" + data);
+
+            modalheader.innerText = machineName;
+
+            let exData = JSON.parse(data);
+
+            let exerciseInfo = [];
+            let exercisesInfo;
+
+            for (let ex of exData) {
+                exercisesInfo = [];
+
+                exercisesInfo.push(ex.id);
+                exercisesInfo.push(ex.name);
+                exercisesInfo.push(ex.muscleGroup);
+                exercisesInfo.push(ex.description);
+                exercisesInfo.push(ex.tutorial);
+
+                exerciseInfo.push(exercisesInfo);
+            }
+
+            for (let exer of exerciseInfo) {
+                let tableBody = document.getElementById("tabBod");
+                let contInner;
+
+                let container = document.createElement("tr");
+                tableBody.appendChild(container);
+
+                for (let data of exer) {
+                    contInner = document.createElement("td");
+                    if (data.toString().includes("https://")) {
+
+                        var newString = data.replace("watch?v=", "embed/");
+                        data = "<iframe width='220' height='145' src=" + newString + " allowfullscreen='allowfullscreen'></iframe>";
+
+                        // data = "<a href=" + data + ">Tutorial</a>";
+                    } else {
+
+                    }
+                    contInner.innerHTML = data;
+                    container.appendChild(contInner);
+                }
+
+                contInner = document.createElement("td");
+
+                let modifyBtn = `<button type="button" class="btn btn-dark" data-toggle="modal" data-target="#exampleModalCenter" onclick='populateModal("${exer[0]}","${exer[1]}","${exer[2]}","${exer[3]}","${exer[4]}")'>Modify</button>`;
+
+                contInner.innerHTML = modifyBtn;
+
+                container.appendChild(contInner);
+            }
+
+        })
+        .catch((data) => {
+            console.log("It failed!" + data);
+        });
 }
