@@ -191,14 +191,6 @@ function getExercises(id, machineName) {
                     contInner.innerHTML = data;
                     container.appendChild(contInner);
                 }
-
-                contInner = document.createElement("td");
-
-                let modifyBtn = `<button type="button" class="btn btn-dark" data-toggle="modal" data-target="#exampleModalCenter" onclick='populateModal("${exer[0]}","${exer[1]}","${exer[2]}","${exer[3]}","${exer[4]}")'>Modify</button>`;
-
-                contInner.innerHTML = modifyBtn;
-
-                container.appendChild(contInner);
             }
 
         })

@@ -132,3 +132,18 @@ button.link {
     border: none;
     text-align: left;
 }
+
+div.content {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+th {
+    white-space: nowrap;
+}
+
+tr {
+    text-align: justify;
+}
