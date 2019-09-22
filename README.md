@@ -4,8 +4,12 @@
 ## Index
 * [Brief](#brief)
   * [Solution](#solution)
-* [Front End Design](#FE)
 * [Entity Relationship Diagrams](#erd)
+* [Testing](#testing)
+* [Deplyment](#deployment)
+* [Front End Design](#FE)
+
+
 
 <a name="brief"></a>
 ## BRIEF
@@ -18,6 +22,12 @@ I decided to create a gym application that would allow the user to view, add, up
 
 <a name="erd"></a>
 ## Entity Relationship Diagrams
+
+<a name="testing"></a>
+## Testing
+
+<a name="deployment"></a>
+## Deployment
 
 <a name="FE"></a>
 ## Front End Design
