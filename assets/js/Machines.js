@@ -155,7 +155,10 @@ function getExercises(id, machineName) {
         .then((data) => {
             console.log("got it!" + data);
 
-            modalheader.innerText = machineName;
+            if (machineName) {
+                modalheader.innerText = machineName;
+                document.getElementById("machineID").value = id;
+            }
 
             let exData = JSON.parse(data);
 
@@ -228,4 +231,37 @@ function deleteExerMach(exerciseID, machineID) {
             console.log("It failed!" + data);
         });
 
+}
+
+function addExerciseMachine(data) {
+
+    var formDataObj = {};
+
+    for (let element of data) {
+        if (element.name) {
+            formDataObj[element.name] = element.value;
+        }
+    }
+
+    makeRequest("http://34.89.83.113:9000/exerciseMachine/", formDataObj, type = "POST")
+        .then((data) => {
+            console.log("it Worked!" + data);
+
+            for (var a in formDataObj) {
+                var mahcineId = (a, formDataObj[a]);
+                break
+            }
+
+            // var machineName = document.getElementById("modalheader").value;
+
+            getExercises(mahcineId);
+
+        })
+        .catch((data) => {
+            console.log("It failed!" + data);
+        })
+
+    console.log(formDataObj);
+
+    return false;
 }
