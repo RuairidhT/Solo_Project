@@ -16,7 +16,7 @@ To create an OOP-based application with utilisation of supporting tools, methodo
 ![Home page Wireframe](/Documentation/Homepage.png)
 ##### Exercises Page
 ![Exercises page Wireframe](/Documentation/ExercisesPage.png)
-##### Workouts Page
-![Workouts page Wireframe](/Documentation/WorkoutsPage.png)
+##### Machines Page
+![Machines page Wireframe](/Documentation/MachinesPage.png)
 ##### Modify Button Popup
 ![Modify Button Popup Wireframe](/Documentation/ModifyPopup.png)
