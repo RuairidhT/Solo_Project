@@ -179,6 +179,7 @@ function getExercises(id, machineName) {
                 let contInner;
 
                 let container = document.createElement("tr");
+                container.setAttribute("id", `${exer[0]}`)
                 tableBody.appendChild(container);
 
                 for (let data of exer) {
@@ -195,7 +196,7 @@ function getExercises(id, machineName) {
                 }
                 contInner = document.createElement("td");
 
-                let modifyBtn = `<button class="deleteButton" onclick='deleteExerMach("${exer[0]}")'>x</button>`;
+                let modifyBtn = `<button class="deleteButton" onclick='deleteExerMach("${exer[0]}","${id}")'>x</button>`;
 
                 contInner.innerHTML = modifyBtn;
 
@@ -209,21 +210,18 @@ function getExercises(id, machineName) {
 }
 
 
-function deleteExerMach(id) {
+function deleteExerMach(exerciseID, machineID) {
 
-    makeRequest("http://34.89.83.113:9000/exerciseMachine/", id, type = "DELETE")
+    console.log(exerciseID);
+    console.log(machineID);
+
+    var param = `${exerciseID}/${machineID}`
+
+    makeRequest("http://34.89.83.113:9000/exerciseMachine/", param, type = "DELETE")
         .then((data) => {
             console.log("Deleted" + data);
 
-            $("a[data-target=#myExtraLargeModalLabel]").click(function(ev) {
-                ev.preventDefault();
-                var target = $(this).attr("href");
-
-                // load the url and show modal on success
-                $("#myExtraLargeModalLabel .modal-body").load(target, function() {
-                    $("#myExtraLargeModalLabel").modal("show");
-                });
-            });
+            document.getElementById("tabBod").removeChild(document.getElementById(`${exerciseID}`));
 
         })
         .catch((data) => {
