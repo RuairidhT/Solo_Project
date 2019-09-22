@@ -21,7 +21,8 @@ To create an OOP-based application with utilisation of supporting tools, methodo
 I decided to create a gym application that would allow the user to view, add, update and delete the different machines and exercises that could be done at the gym. A many to many relationship between the machines and exercises has been added to allow the user to see what machines can be used for an exercise and vice versa.
 
 <a name="erd"></a>
-## Entity Relationship Diagrams
+## Entity Relationship Diagram
+![Entity Relationship Diagram](/Documentation/ERD.png)
 
 <a name="testing"></a>
 ## Testing
