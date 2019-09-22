@@ -247,14 +247,11 @@ function addExerciseMachine(data) {
         .then((data) => {
             console.log("it Worked!" + data);
 
-            for (var a in formDataObj) {
-                var mahcineId = (a, formDataObj[a]);
-                break
-            }
+            let exData = JSON.parse(data);
 
-            // var machineName = document.getElementById("modalheader").value;
+            for (var a in exData) {}
 
-            getExercises(mahcineId);
+            getExercises(exData["machine_id"]);
 
         })
         .catch((data) => {

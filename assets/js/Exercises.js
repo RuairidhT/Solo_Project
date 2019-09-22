@@ -179,7 +179,10 @@ function getMachines(id, exerciseName) {
         .then((data) => {
             console.log("got it!" + data);
 
-            modalheader.innerText = exerciseName;
+            if (exerciseName) {
+                modalheader.innerText = exerciseName;
+                document.getElementById("exerciseID").value = id;
+            }
 
             let machData = JSON.parse(data);
 
@@ -201,6 +204,7 @@ function getMachines(id, exerciseName) {
                 let contInner;
 
                 let container = document.createElement("tr");
+                container.setAttribute("id", `${machine[0]}`)
                 tableBody.appendChild(container);
 
                 for (let data of machine) {
@@ -208,10 +212,69 @@ function getMachines(id, exerciseName) {
                     contInner.innerHTML = data;
                     container.appendChild(contInner);
                 }
+
+                contInner = document.createElement("td");
+
+                let deleteBtn = `<button class="deleteButton" onclick='deleteExerMach("${id}","${machine[0]}")'>x</button>`;
+
+                contInner.innerHTML = deleteBtn;
+
+                container.appendChild(contInner);
             }
 
         })
         .catch((data) => {
             console.log("It failed!" + data);
         });
+}
+
+
+function deleteExerMach(exerciseID, machineID) {
+
+    console.log(exerciseID);
+    console.log(machineID);
+
+    var param = `${exerciseID}/${machineID}`
+
+    makeRequest("http://34.89.83.113:9000/exerciseMachine/", param, type = "DELETE")
+        .then((data) => {
+            console.log("Deleted" + data);
+
+            document.getElementById("tableBod").removeChild(document.getElementById(`${machineID}`));
+
+        })
+        .catch((data) => {
+            console.log("It failed!" + data);
+        });
+
+}
+
+function addExerciseMachine(data) {
+
+    var formDataObj = {};
+
+    for (let element of data) {
+        if (element.name) {
+            formDataObj[element.name] = element.value;
+        }
+    }
+
+    makeRequest("http://34.89.83.113:9000/exerciseMachine/", formDataObj, type = "POST")
+        .then((data) => {
+            console.log("it Worked!" + data);
+
+            let exData = JSON.parse(data);
+
+            for (var a in exData) {}
+
+            getMachines(exData["exercise_id"]);
+
+        })
+        .catch((data) => {
+            console.log("It failed!" + data);
+        })
+
+    console.log(formDataObj);
+
+    return false;
 }

@@ -148,6 +148,7 @@
                                             <th>ID</th>
                                             <th>Name</th>
                                             <th>Description</th>
+                                            <th></th>
                                         </tr>
                                     </thead>
                                     <tbody id="tableBod">
@@ -155,6 +156,15 @@
                                     </tbody>
                                 </table>
                             </div>
+                            <form onsubmit="return addExerciseMachine(this)">
+                                <div class="form-inline" style="padding-top:10px;padding-left:10px;padding-right:10px;padding-bottom: 10px;">
+                                    <label class="col-form-label" style="padding-right: 10px">Machine ID:</label>
+                                    <input class="form-control mr-1" id="machineID" name="machine_id" required>
+                                    <label class="col-form-label" aria-placeholder="Enter exercise ID!" style="padding-right: 10px;padding-left: 10px">Exercise ID:</label>
+                                    <input class="form-control mr-1" type="number" id="exerciseID" name="exercise_id" readonly>
+                                    <button type="submit" class="btn btn-success">Add</button>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
