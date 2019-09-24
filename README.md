@@ -49,7 +49,6 @@ Start going to the gym.
 <a name="author"></a>
 ## Authors
 Ruairidh Taylor
-Stack Overflow
 
 <a name="acknowledgements"></a>
 ## Acknowledgements
