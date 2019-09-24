@@ -1,0 +1,5 @@
+As a user I would want to be able to add new exercises and machines so I can keep the database up to date. 
+As a user I would want to be able to modify the column values so I can update the update the values.
+As a user I would want video links to each exercise so I can understand more about the exercise and improve on my form.
+As a user I would want a user friendly GUI so I can easily navigate the website.
+As a user I would want to be able click on the exercise and for it to show me the different machines it can be done on and vice versa.
