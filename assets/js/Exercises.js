@@ -62,7 +62,7 @@ function eClicked(form) {
         if (element.value) {
             formObject[element.id] = element.value;
         }
-    };
+    }
 
     return false;
 }

@@ -47,9 +47,9 @@ function populateTable() {
 
 function populateModal(id, name, description) {
 
-    document.getElementById('inputID').value = id;
-    document.getElementById('inputName').value = name;
-    document.getElementById('inputDesc').value = description;
+    document.getElementById("inputID").value = id;
+    document.getElementById("inputName").value = name;
+    document.getElementById("inputDesc").value = description;
 }
 
 
