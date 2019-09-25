@@ -89,7 +89,7 @@ function deleteMachine() {
     makeRequest("http://34.89.83.113:9000/machines/", id, type = "DELETE")
         .then((data) => {
             console.log("Deleted" + data);
-            window.location.href = window.location.href
+            window.location.href = window.location.href;
         })
         .catch((data) => {
             console.log("It failed!" + data);
@@ -110,9 +110,9 @@ function addMachine(data) {
         .then((data) => {
             console.log("it Worked!" + data);
 
-            $('#exampleModalCenter').modal('hide');
-            $('.modal').on('hidden.bs.modal', function() {
-                $(this).find('form')[0].reset();
+            $("#exampleModalCenter").modal("hide");
+            $(".modal").on("hidden.bs.modal", function() {
+                $(this).find("form")[0].reset();
             });
 
             window.location.href = window.location.href;
@@ -120,8 +120,6 @@ function addMachine(data) {
         .catch((data) => {
             console.log("It failed!" + data);
         })
-
-    console.log(formDataObj);
 
     return false;
 }
@@ -215,10 +213,7 @@ function getExercises(id, machineName) {
 
 function deleteExerMach(exerciseID, machineID) {
 
-    console.log(exerciseID);
-    console.log(machineID);
-
-    var param = `${exerciseID}/${machineID}`
+    var param = `${exerciseID}/${machineID}`;
 
     makeRequest("http://34.89.83.113:9000/exerciseMachine/", param, type = "DELETE")
         .then((data) => {
@@ -256,9 +251,7 @@ function addExerciseMachine(data) {
         })
         .catch((data) => {
             console.log("It failed!" + data);
-        })
-
-    console.log(formDataObj);
+        });
 
     return false;
 }

@@ -69,11 +69,11 @@ function eClicked(form) {
 
 function populateModal(id, name, mGroup, description, tutorial) {
 
-    document.getElementById('inputID').value = id;
-    document.getElementById('inputName').value = name;
-    document.getElementById('inputGroup').value = mGroup;
-    document.getElementById('inputDesc').value = description;
-    document.getElementById('inputTutorial').value = tutorial;
+    document.getElementById("inputID").value = id;
+    document.getElementById("inputName").value = name;
+    document.getElementById("inputGroup").value = mGroup;
+    document.getElementById("inputDesc").value = description;
+    document.getElementById("inputTutorial").value = tutorial;
 }
 
 function updateExercise(form) {
@@ -134,20 +134,16 @@ function addExercise(data) {
         .then((data) => {
             console.log("it Worked!" + data);
 
-            $('#exampleModalCenter').modal('hide');
-            $('.modal').on('hidden.bs.modal', function() {
-                $(this).find('form')[0].reset();
+            $("#exampleModalCenter").modal("hide");
+            $(".modal').on('hidden.bs.modal", function() {
+                $(this).find("form")[0].reset();
             });
 
             window.location.href = window.location.href;
         })
         .catch((data) => {
             console.log("It failed!" + data);
-        })
-
-    console.log(formDataObj);
-
-
+        });
 
     return false;
 }
@@ -163,7 +159,7 @@ function searchFunction() {
 
         td = tr[i].getElementsByTagName("td");
 
-        if (td.length > 0) { // to avoid th
+        if (td.length > 0) {
 
             if (td[0].innerHTML.toUpperCase().indexOf(filter) > -1 || td[1].innerHTML.toUpperCase().indexOf(filter) > -1) {
                 tr[i].style.display = "";
@@ -237,7 +233,7 @@ function deleteExerMach(exerciseID, machineID) {
     console.log(exerciseID);
     console.log(machineID);
 
-    var param = `${exerciseID}/${machineID}`
+    var param = `${exerciseID}/${machineID}`;
 
     makeRequest("http://34.89.83.113:9000/exerciseMachine/", param, type = "DELETE")
         .then((data) => {
@@ -275,9 +271,7 @@ function addExerciseMachine(data) {
         })
         .catch((data) => {
             console.log("It failed!" + data);
-        })
-
-    console.log(formDataObj);
+        });
 
     return false;
 }
