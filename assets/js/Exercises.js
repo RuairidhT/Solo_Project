@@ -135,7 +135,7 @@ function addExercise(data) {
             console.log("it Worked!" + data);
 
             $("#exampleModalCenter").modal("hide");
-            $(".modal').on('hidden.bs.modal", function() {
+            $(".modal").on("hidden.bs.modal", function() {
                 $(this).find("form")[0].reset();
             });
 
