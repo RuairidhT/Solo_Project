@@ -56,14 +56,24 @@ I decided to create a gym application that would allow the user to view, add, up
 <a name="FE"></a>
 ## Front End Design
 ### Wireframes
-##### Home Page
-![Home page Wireframe](/Documentation/Homepage.png)
-##### Exercises Page
+Home Page
+![Home page Wireframe](/Documentation/HomePageWF.png)
+Exercises Page
+![Exercise page Wireframe](/Documentation/ExercisePageWF.png)
+Machines Page
+![Machines page Wireframe](/Documentation/MachinesPageWF.png)
+Modify Button Popup
+![Modify Button Popup Wireframe](/Documentation/ModifyPopupWF.png)
+
+### Final look
+Home Page
+![Home page Wireframe](/Documentation/HomePage.png)
+Exercises Page
 ![Exercise page Wireframe](/Documentation/ExercisePage.png)
-##### Machines Page
+Machines Page
 ![Machines page Wireframe](/Documentation/MachinesPage.png)
-##### Modify Button Popup
-![Modify Button Popup Wireframe](/Documentation/ModifyPopup.png)
+Modify Button Popup
+![Modify Button Popup Wireframe](/Documentation/Modal.png)
 
 <a name="future"></a>
 ## Future Improvements
