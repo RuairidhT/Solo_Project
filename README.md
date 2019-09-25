@@ -56,23 +56,23 @@ I decided to create a gym application that would allow the user to view, add, up
 <a name="FE"></a>
 ## Front End Design
 ### Wireframes
-Home Page
+###### Home Page
 ![Home page Wireframe](/Documentation/WFHomePage.png)
-Exercises Page
+###### Exercises Page
 ![Exercise page Wireframe](/Documentation/WFExercisePage.png)
-Machines Page
+###### Machines Page
 ![Machines page Wireframe](/Documentation/WFMachinesPage.png)
-Modify Button Popup
+###### Modify Button Popup
 ![Modify Button Popup Wireframe](/Documentation/WFModifyPopup.png)
 
 ### Final look
-Home Page
+###### Home Page
 ![Home page](/Documentation/HomePage.png)
-Exercises Page
+###### Exercises Page
 ![Exercise page](/Documentation/ExercisePage.png)
-Machines Page
+###### Machines Page
 ![Machines page](/Documentation/MachinesPage.png)
-Modify Button Popup
+###### Modify Button Popup
 ![Modify Button Popup](/Documentation/Modal.png)
 
 <a name="future"></a>
