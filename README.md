@@ -67,7 +67,7 @@ I decided to create a gym application that would allow the user to view, add, up
 
 ### Final look
 ###### Home Page
-![Home page](/Documentation/HomePage.png)
+![Home page](/Documentation/indexPage.png)
 ###### Exercises Page
 ![Exercise page](/Documentation/ExercisePage.png)
 ###### Machines Page
