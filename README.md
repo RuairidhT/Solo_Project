@@ -37,6 +37,7 @@ I decided to create a gym application that would allow the user to view, add, up
 
 <a name="deployment"></a>
 ## Deployment
+![CI](/Documentation/CI.png)
 
 <a name="tech"></a>
 ### Technologies Used
