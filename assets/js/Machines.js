@@ -88,6 +88,7 @@ function deleteMachine() {
     makeRequest("http://34.89.83.113:9000/machines/", id, type = "DELETE")
         .then((data) => {
             console.log("Deleted" + data);
+            $("#updateFunctionality").modal("hide");
             window.location.href = window.location.href;
         })
         .catch((data) => {
