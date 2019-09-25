@@ -67,13 +67,13 @@ Modify Button Popup
 
 ### Final look
 Home Page
-![Home page Wireframe](/Documentation/HomePage.png)
+![Home page](/Documentation/HomePage.png)
 Exercises Page
-![Exercise page Wireframe](/Documentation/ExercisePage.png)
+![Exercise page](/Documentation/ExercisePage.png)
 Machines Page
-![Machines page Wireframe](/Documentation/MachinesPage.png)
+![Machines page](/Documentation/MachinesPage.png)
 Modify Button Popup
-![Modify Button Popup Wireframe](/Documentation/Modal.png)
+![Modify Button Popup](/Documentation/Modal.png)
 
 <a name="future"></a>
 ## Future Improvements
