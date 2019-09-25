@@ -27,6 +27,8 @@ I decided to create a gym application that would allow the user to view, add, up
 ## Architecture
 <a name="erd"></a>
 ### Entity Relationship Diagram
+The ERD shows the 3 tables that have been implemented into this project, as you can see there is a many to many relationship between the machines and exercises table meaning an associative table needed to be added.
+An associative (or junction) table maps two or more tables together by referencing the primary keys of each data table. In effect, it contains a number of foreign keys, each in a many-to-one relationship from the junction table to the individual data tables.
 ![Entity Relationship Diagram](/Documentation/ERD.png)
 <a name="uml"></a>
 ### UML Class Diagram
@@ -77,7 +79,8 @@ I decided to create a gym application that would allow the user to view, add, up
 
 <a name="future"></a>
 ## Future Improvements
-Start going to the gym. 
+* Change "Machines" to "Equipment"
+* Improve the way that machines/exercises are added to the associative table.
 
 <a name="author"></a>
 ## Authors
