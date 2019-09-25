@@ -86,13 +86,13 @@ function updateExercise(form) {
         } else {
             formObject[element.name] = element.value;
         }
-    };
+    }
 
     makeRequest("http://34.89.83.113:9000/exercises/" + id, formObject, "PUT")
         .then((data) => {
             console.log("it Worked!" + data);
 
-            $('#updateFunctionality').modal('hide');
+            $("#updateFunctionality").modal("hide");
             window.location.href = window.location.href
         })
         .catch((data) => {
@@ -203,7 +203,7 @@ function getMachines(id, exerciseName) {
                 let contInner;
 
                 let container = document.createElement("tr");
-                container.setAttribute("id", `${machine[0]}`)
+                container.setAttribute("id", `${machine[0]}`);
                 tableBody.appendChild(container);
 
                 for (let data of machine) {
@@ -229,9 +229,6 @@ function getMachines(id, exerciseName) {
 
 
 function deleteExerMach(exerciseID, machineID) {
-
-    console.log(exerciseID);
-    console.log(machineID);
 
     var param = `${exerciseID}/${machineID}`;
 

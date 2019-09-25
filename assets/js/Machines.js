@@ -1,7 +1,6 @@
 function populateTable() {
 
     makeRequest("http://34.89.83.113:9000/machines").then((data) => {
-        console.log(data);
 
         let machData = JSON.parse(data);
 
@@ -64,14 +63,14 @@ function updateMachine(form) {
         } else {
             formObject[element.name] = element.value;
         }
-    };
+    }
 
     makeRequest("http://34.89.83.113:9000/machines/" + id, formObject, "PUT")
         .then((data) => {
             console.log("it Worked!" + data);
 
-            $('#updateFunctionality').modal('hide');
-            window.location.href = window.location.href
+            $("#updateFunctionality").modal("hide");
+            window.location.href = window.location.href;
         })
         .catch((data) => {
             console.log("It failed!" + data);
@@ -119,7 +118,7 @@ function addMachine(data) {
         })
         .catch((data) => {
             console.log("It failed!" + data);
-        })
+        });
 
     return false;
 }
@@ -180,7 +179,7 @@ function getExercises(id, machineName) {
                 let contInner;
 
                 let container = document.createElement("tr");
-                container.setAttribute("id", `${exer[0]}`)
+                container.setAttribute("id", `${exer[0]}`);
                 tableBody.appendChild(container);
 
                 for (let data of exer) {
