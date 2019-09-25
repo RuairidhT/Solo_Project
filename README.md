@@ -9,6 +9,7 @@
   * [UML Class Diagram](#uml)
 * [Testing](#testing)
 * [Deplyment](#deployment)
+  * [Technologies Used](#tech)
 * [Front End Design](#FE)
 * [Future Improvements](#future)
 * [Authors](#author)
@@ -36,6 +37,20 @@ I decided to create a gym application that would allow the user to view, add, up
 
 <a name="deployment"></a>
 ## Deployment
+
+<a name="tech"></a>
+### Technologies Used
+
+*   MySQL Database Engine - Database
+*   Java - API Logic
+*   JavaScript - Front End Logic
+*   HTML, CSS - Front End Design
+*   Apache2 - Deployment
+*   Jenkins - CI Server
+*   Maven - Dependency Management
+*   [Git](https://github.com/RuairidhT/Solo_Project) - VCS
+*   [Trello](https://trello.com/b/QgtEgD3s/billy-no-weights) - Project Tracking
+*   GCP - Live Environment
 
 <a name="FE"></a>
 ## Front End Design
