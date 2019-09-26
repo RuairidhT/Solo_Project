@@ -50,6 +50,12 @@ is up to standard.
 ## Deployment
 ![CI](/Documentation/CI.png)
 
+First and foremost Trello was used as a project tracking tool which allowed me to track the tasks which needed to be done and the priority of each task.
+I used Github as a VCS in order to keep track of the code and manage the different features that have been added.
+The front end website was created using HTML, JavaScript and CSS, and the back end was created using Java and spring boot for the API and MySQL for the database.
+Jenkins was used for CI by automatically cloning from my Github and putting it on to GCP where the website was being hosted. 
+JUnit was used to test the back end while Selenium was used to test the front end. 
+
 <a name="tech"></a>
 ### Technologies Used
 
