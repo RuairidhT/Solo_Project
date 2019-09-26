@@ -36,7 +36,16 @@ An associative (or junction) table maps two or more tables together by referenci
 
 <a name="testing"></a>
 ## Testing
+For the backend API JUnit tests were carried out making sure as much of the code was covered as possible, as for the front end selenium tests
+were carried out checking the functionality of each button and input. Throughout the project codacy was used to make sure the quality of code
+is up to standard.
 
+* [JUnit Tests](/Documentation/CodeCoverage.png)
+* [Selenium Tests]()
+* Codacy Tests
+	* [Front end Tests](https://app.codacy.com/manual/RuairidhT/Solo_Project/dashboard)
+	* [Back end Tests](https://app.codacy.com/manual/RuairidhT/Solo_Project_Backend/dashboard)
+	
 <a name="deployment"></a>
 ## Deployment
 ![CI](/Documentation/CI.png)
