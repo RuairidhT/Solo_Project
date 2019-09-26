@@ -41,7 +41,7 @@ were carried out checking the functionality of each button and input. Throughout
 is up to standard.
 
 * [JUnit Tests](https://github.com/RuairidhT/Solo_Project/blob/developer/Documentation/CodeCoverage.PNG)
-* [Selenium Tests]()
+* [Selenium Tests](https://github.com/RuairidhT/Solo_Project/blob/developer/Documentation/SeleniumReports.PNG)
 * Codacy Tests
 	* [Front end Tests](https://app.codacy.com/manual/RuairidhT/Solo_Project/dashboard)
 	* [Back end Tests](https://app.codacy.com/manual/RuairidhT/Solo_Project_Backend/dashboard)
@@ -53,16 +53,17 @@ is up to standard.
 <a name="tech"></a>
 ### Technologies Used
 
-*   MySQL Database Engine - Database
-*   Java - API Logic
-*   JavaScript - Front End Logic
+*   GCP - Live Environment
+*   MySQL Database- Database
+*   Java - API 
+*   JavaScript - Front End 
 *   HTML, CSS - Front End Design
 *   Apache2 - Deployment
 *   Jenkins - CI Server
 *   Maven - Dependency Management
 *   [Git](https://github.com/RuairidhT/Solo_Project) - VCS
 *   [Trello](https://trello.com/b/QgtEgD3s/billy-no-weights) - Project Tracking
-*   GCP - Live Environment
+
 
 <a name="FE"></a>
 ## Front End Design
@@ -90,11 +91,14 @@ is up to standard.
 ## Future Improvements
 * Change "Machines" to "Equipment"
 * Improve the way that machines/exercises are added to the associative table.
+* Impletement Docker for the API.
+* Reduce code duplication.
 
 <a name="author"></a>
 ## Authors
-Ruairidh Taylor
+###### Ruairidh Taylor
 
 <a name="acknowledgements"></a>
 ## Acknowledgements
-* Colonel Sanders
+* Colonel Sanders!
+* QA consulting and our amazing instructors!
