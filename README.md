@@ -103,8 +103,3 @@ JUnit was used to test the back end while Selenium was used to test the front en
 <a name="author"></a>
 ## Authors
 ###### Ruairidh Taylor
-
-<a name="acknowledgements"></a>
-## Acknowledgements
-* Colonel Sanders!
-* QA consulting and our amazing instructors!
